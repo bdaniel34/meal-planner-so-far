@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  box-sizing: border-box;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 100vh;
+}
+
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(191px, 1fr));
+}
+
+.dido {
+  display: block;
+}
+textarea {
+  border-radius: 15px;
+  resize: none;
+  border-color: white;
+  width: auto;
+  background-color: #28f1f1;
+  margin-top: 3rem;
+  height: 167px;
+}
+
+textarea:focus {
+  outline: none;
+}
+.input {
+  display: grid;
+  margin-top: -30px;
+  
+
+}
+textarea.form-control{
+background-color: #28f1f1;
+}
+input[type="file"] {
+  box-sizing:border-box;
+  color: invisible;
+  margin-top: -36px;
+  max-width: -webkit-fill-available;
+}
+
+.tt {
+  position: relative;
+  display: flex;
+  margin-top: 11px;
+  width: 100%;
+}
+.save {
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  display: grid;
+  color: white;
+  margin: 0;
+  margin-left: 72px;
+  margin-top: 20px;
+}
+
+.save:hover {
+  background-color: yellow;
+  cursor: pointer;
+  color: black;
+}
+
+.note {
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+svg {
+  stroke: currentcolor;
+  fill: currentcolor;
+  stroke-width: 0;
+  height: 2.3em;
+  width: 3.3em;
+}
+
+.delete-icon {
+  cursor: pointer;
+
+  justify-items: flex-end;
+  position: absolute;
+  bottom: 2px;
+  right: -11px;
+  font-size: 18px;
+}
+
+.search {
+  background-color: rgb(233, 233, 233);
+  border-radius: 15px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+  width: 100%;
+}
+
+.search input:focus {
+  outline: none;
+}
+.photo {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  margin-top: 16px;
+  position: relative;
+}
+.col-sm-12 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: contents;
+}
+#namecontainer {
+  font-size: large;
+  color: orange;
+
+  height: 50px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#namecontainer:hover {
+  text-overflow: clip;
+  white-space: normal;
+  word-break: break-all;
+  overflow: visible;
+}
+#namecontainer.text {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  justify-items: flex-end;
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  font-size: 13px;
+  color: white;
+}
+
+.pol {
+  background-color: red;
+  grid-row: 1 / span 2;
+}
+
+.recipes {
+  width: fit-content;
+  display: grid;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.recipe {
+  /* width: 30rem; */
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #28f1f1;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.recipe h2 {
+  background-color: rgba(161, 161, 161, 0.7);
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-shadow: 0 0.5rem 0.5rem #555;
+  color: #fff;
+}
+
+.recipe img {
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.recipe a {
+  font-size: 1.8rem;
+  color: #40b48e;
+}
