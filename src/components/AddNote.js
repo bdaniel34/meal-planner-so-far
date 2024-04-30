@@ -1,34 +1,31 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from 'react';
 
-export default function AddNote({ handleAddNote, container }) {
-  const [textNote, settextNote] = useState();
-  const [category, setcategory] = useState();
-  const [selectedImage, setSelectedImage] = useState();
+function AddNote({ handleAddNote, container }) {
+  const [textNote, settextNote] = useState('');
+  const [category, setcategory] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleChange = (event) => {
     settextNote(event.target.value);
   };
 
   const handleSaveClick = () => {
-    if (category && category !== "Choose..." && textNote !== "") {
-      let url = "https://via.placeholder.com/200";
-      if (selectedImage != null) {
-        url = URL.createObjectURL(selectedImage);
+    if (category && category !== 'Choose...' && textNote !== '') {
+      let imageUrl = 'https://via.placeholder.com/200';
+      if (selectedImage) {
+        imageUrl = URL.createObjectURL(selectedImage);
       }
-  
-      handleAddNote(textNote, category, url, container);
-  
-      settextNote("");
-      setcategory("");
-      setSelectedImage("");
 
-      
+      handleAddNote(textNote, category, imageUrl, container);
+
+      settextNote('');
+      setcategory('');
+      setSelectedImage(null);
     } else {
-      alert("Please select a category");
+      alert('Please select a category and provide text for the note.');
     }
   };
-  
+
   return (
     <div className="row">
       <div className="col-6">
@@ -44,7 +41,11 @@ export default function AddNote({ handleAddNote, container }) {
       <div className="col-6">
         <div className="form-group">
           <label htmlFor="inputGroupSelect01">Category</label>
-          <select className="form-control"value={category} onChange={(e) => setcategory(e.target.value)}>
+          <select
+            className="form-control"
+            value={category}
+            onChange={(e) => setcategory(e.target.value)}
+          >
             <option value="Choose...">Choose...</option>
             <option value="Meat">Meat</option>
             <option value="Fish">Fish</option>
@@ -61,8 +62,8 @@ export default function AddNote({ handleAddNote, container }) {
             <div>
               <img
                 alt="not found"
-                width={"100px"}
-                height={"100px"}
+                width={'100px'}
+                height={'100px'}
                 src={URL.createObjectURL(selectedImage)}
               />
 
@@ -71,7 +72,6 @@ export default function AddNote({ handleAddNote, container }) {
             </div>
           )}
           <br />
-
           <br />
           <input
             className="input"
@@ -79,16 +79,16 @@ export default function AddNote({ handleAddNote, container }) {
             id="inputGroupSelect01"
             name="myImage"
             onChange={(event) => {
-              console.log(event.target.files[0]);
               setSelectedImage(event.target.files[0]);
             }}
           />
           <button className="save" onClick={handleSaveClick}>
             Save
           </button>
-   
         </div>
       </div>
     </div>
   );
 }
+
+export default AddNote;

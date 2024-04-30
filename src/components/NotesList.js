@@ -10,6 +10,7 @@ const NotesList = ({ notes,  handleDeleteNote }) => {
           key={note.id}
           id={note.id}
           text={note.text}
+          title={note.title}
           date={note.date}
           option={note.option}
           category={note.category}

@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function Search({handleSearch,totalNotes,totalselectedNotes}) {
+  // searchUtils.js
+ 
   return (
     <div className='recipe'>
     Total Recipes: {totalNotes}<br/>

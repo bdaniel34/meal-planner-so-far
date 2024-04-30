@@ -3,6 +3,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 export default function Note({
   text,
+  title,
   id,
   date,
   handleDeleteNote,
@@ -29,11 +30,12 @@ export default function Note({
           </div>
         </span>
         {/* <div id="namecontainer">{text}</div> */}
-        <Link to="./folder">
+        <Link id="namecontainer" to="./">
         {text}
         </Link>
         <div>{container}</div>
         <h1>{date}</h1>
+        <h2>{title}</h2>
         <h2>{option}</h2>
         <h2>{options}</h2>
         <h2>{category}</h2>
